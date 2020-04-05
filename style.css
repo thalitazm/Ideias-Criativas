@@ -1,0 +1,15 @@
+body{
+    background: hsl(0, 0%, 90%);
+    color: #25282B;
+    text-align: center;
+}
+p{
+    text-align: right;
+    font-size: 14px;
+}
+.fat{ /* ponto é sempre para classe! */
+    color: red;
+}
+#footer{ /* # é sempre para id! */
+    text-align: left;
+}
