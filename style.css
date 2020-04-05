@@ -3,13 +3,27 @@ body{
     color: #25282B;
     text-align: center;
 }
-p{
-    text-align: right;
+body img{
+
+}
+button{
+    background: none;
+    border: none;
+    color:#ff5E84;
+    font-weight: bold;
+}
+p{    
     font-size: 14px;
 }
 .fat{ /* ponto é sempre para classe! */
-    color: red;
+    /* button.fat => o botão que leva à classe fat; é diferente de:button . fat => tem um fat dentro de um button! */
+    color: white;
+    background: #ff5E84;
 }
-#footer{ /* # é sempre para id! */
-    text-align: left;
+#footer a { /* # é sempre para id! estilização somente no link! */
+    color: #25282B;
+    text-decoration: none;
+}
+.hide{
+    display: none;
 }
