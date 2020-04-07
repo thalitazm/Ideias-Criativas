@@ -3,38 +3,121 @@
     <!-- Isto é um comentário em HTML -->
     <head>
         <!-- Configurações da página -->
-        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
         <meta charset="UTF-8">
-        <title>Ideias Criativa</title>
+        <title>Collab idea</title>
     </head>   
     <body>
-        <h1</h1>
-        <!-- img não precisa fechar -->
-        <img src="logo.png" alt="imagem da logo">
+        <div id="container">
 
-        <p>Ficar em casa por longos períodos não é fácil.</p>
-        <p>Por isso, iremos catalogar <strong>ideias, brincadeiras, jogos, filmes, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.</p>
-        <p>Clique em ver ideias para visualizar as ideias já cadastradas e contribua adicionando a sua. O que você está esperando?</p>  
-        <button>Adicionar ideia</button>
-        <button class="fat">Visualizar ideias</button>
+            <section id="intro">
+                <!-- img não precisa fechar -->
+                <header>
+                    <img src="logo.png" alt="imagem da logo">
+                </header>
+                <main> <!-- conteúdo principal -->
+                    <p>Ficar em casa por longos períodos não é fácil.</p>
+                    <p>Por isso, iremos catalogar <strong>ideias, brincadeiras, jogos, filmes, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.</p>
+                    <p>Clique em ver ideias para visualizar as ideias já cadastradas e contribua adicionando a sua. O que você está esperando?</p>  
+                </main>
+                <section id="buttons">
+                    <button onclick="onOff()">+ Adicionar ideia</button>
+                    <button class="fat">Visualizar ideias</button>
+                </section>
+                <!-- cmd mais espaço aparecem os emojis -->
+                <footer>
+                    Baseado no Workshop do: <a href="http://rocketseat.com.br">Rocketseat</a>
+                </footer>
+            </section>
+            <section id="last-ideas"> <!-- últimas ideias selecionadas -->
+                <div class="idea">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2728/2728995.svg" 
+                    alt="imagem de curso de programação">
+                    <div class="content">
+                        <h3>Cursos de Programação</h3>
+                        <p>Estudo</p>
+                        <div class="description">
+                            Não é necessário ser nenhum gênio para aprender a programar, como a maioria das pessoas imagina. Mas é preciso muito estudo, muita prática e principalmente muita dedicação. 
+                            Quanto mais cedo você começar, melhor será. Confira no link abaixo, os cursos que selecionamos especialmente para você aprender neste período que está em casa.
+                        </div>
+                        <a href="#">Confira</a> 
+                    </div>
+                </div>
+                
+                <div class="idea">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729027.svg" 
+                    alt="imagem de meditação">
+                    <div class="content">
+                        <h3>Exercícios</h3>
+                        <p>Saúde</p>
+                        <div class="description">
+                            Nós entendemos que é um período difícil para você. Está sendo para todos nós, mas em breve irá passar. É preciso acalmar a mente e o coração.
+                            Aproveite para conferir nossos podcasts de meditação. 
+                        </div>
+                        <a href="#">Confira</a> 
+                    </div>
+                </div> 
 
-        <!-- cmd mais espaço aparecem os emojis -->
-        <p id="footer">Fonte: <a href="http://rocketseat.com.br">Rocketseat</a></p>
+                <div class="idea">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729009.svg" 
+                    alt="imagem de receitas pela internet">
+                    <div class="content">
+                        <h3>Receitas saudáveis</h3>
+                        <p>Alimentação</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quam quibusdam repudiandae minus sequi enim magnam eveniet officia vel. Magnam aliquam numquam eos in reprehenderit ut odio, rerum quam minus!
+                        </div>
+                        <a href="#">Confira</a> 
+                    </div>
+                </div> 
+            </section>
+        </div>    
 
+        <!-- Modal: formulário pop-up -->
+        <div id="modal" class="hide">
+            <div class="content">
+                <h1>Cadastro de nova atividade</h1>
+
+                <form action="">
+                
+                    <div class="input-wrapper">
+                        <label for="title">Digite o nome da sua atividade:</label>
+                        <input type="text" name="title">
+                    </div>
+                
+                    <div class="input-wrapper">
+                        <label for="category">Categoria:</label>
+                        <input type="text" name="category">
+                    </div>
+                
+                    <div class="input-wrapper">
+                        <label for="image">Link da imagem:</label>
+                        <input type="url" name="image">
+                    </div>
+                   
+                    <div class="input-wrapper">
+                        <label for="description">Digite uma descrição para esta ideia:</label>
+                        <textarea name="description" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="link">Link da ideia:</label>
+                        <input type="url" name="link">  
+                    </div>
+                    
+                    <a href="#" onclick="onOff()">Voltar</a>
+                    <button>Salvar</button>
+                </form>
+            </div>
+        </div>
+        
          <!-- Tudo é objeto e todo objeto tem atributo e funcionalidade -->
-        <script>
-
-            document
-                .querySelector("button.fat")
-                .addEventListener("click", function(){
-                    document
-                        .querySelector("footer")
-                        .classList
-                        .toggle("hide")
-                })
-
-        </script>
-
+         <script src="script.js"></script>
+        
     </body>
 
 </html>

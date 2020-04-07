@@ -1,29 +1,278 @@
-body{
+
+
+body {
     background: hsl(0, 0%, 90%);
     color: #25282B;
-    text-align: center;
+
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 0;
 }
-body img{
+
+/* body #container { força da cascata -> quando tem o body na frente, é mais forte que #container abaixo 
+    background: green;
+} */
+
+a { /*global*/
+    color: #ff5E84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, .description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+header img{
+    width: 300px;
+}
+
+#container { /* é diferente do comentário de cima -> se fosse o de cima fosse idêntico a esse, o vermelho prevalecia*/
+    width: 80%;  /* fluidez */
+    max-width: 988px;
+
+    margin: 40px auto;
+
+    display: flex; /*  coloca os filhos em linha -> no caso os filhos são intro e last ideas  */
+}
+
+#intro {
+    width: 300px;
+    margin-right: 20px;
+}
+
+main{
+    margin: 32px 0;
+}
+
+
+#buttons {
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-evenly;
 
 }
-button{
+
+button {
     background: none;
     border: none;
     color:#ff5E84;
-    font-weight: bold;
-}
-p{    
+
     font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    cursor: pointer; /* deixa a mãozinha no link */
+
+    outline: none;
 }
-.fat{ /* ponto é sempre para classe! */
+
+button:hover {
+    text-decoration: underline;
+}
+
+
+button.fat { /* ponto é sempre para classe! */
     /* button.fat => o botão que leva à classe fat; é diferente de:button . fat => tem um fat dentro de um button! */
     color: white;
     background: #ff5E84;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px #ff5E8432;
+
+    width: 150px;
+    height: 40px;
 }
-#footer a { /* # é sempre para id! estilização somente no link! */
-    color: #25282B;
+
+button.fat:hover{
     text-decoration: none;
 }
-.hide{
-    display: none;
+
+footer {
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    color: #777;
+}
+
+footer a { /* força */
+    opacity: 0.7;
+}
+
+.idea{
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+   
+    margin-bottom: 32px;
+    padding: 32px;
+    
+}
+
+.idea img{
+    width: 60px;
+    height: 60px;
+
+    margin-right: 32px;
+}
+
+.idea h3{
+    margin: 0;
+}
+
+.idea p{
+    margin: 8px 0;
+    color:#777;
+}
+
+.idea .description{
+    margin: 16px 0;
+}
+
+/* modal */
+
+#modal{
+    background:#ff5E84;
+
+    position: absolute;
+    top: 0;
+
+    width: 100vw;
+    height: 250vh;
+    /* viewport => toda a área visível do seu dispositivo */
+
+    /* pega a página toda juntamente com o position
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+
+    display: flex;
+    justify-content: center;
+
+    transition: 500ms;
+
+}
+
+#modal .content {
+    margin-top: 128px;
+    color:white;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* fração => ideia de flexibilidade */
+    gap: 20px;
+}
+
+/*.input-wrapper { => não precisa mais porque o gap 20 já é suficiente para separar os fields
+    margin: 16px 0; 
+}*/
+
+.content form div:nth-child(3), /* pegue a div filha 3, 4 e 5 */                               
+.content form div:nth-child(4), /* nth-child é um pseudo-elemento */
+.content form div:nth-child(5){   
+    
+    grid-column: span 2;/* e expanda até as duas colunas */
+}
+
+form input, form textarea {
+    width: 100%; /* alinha os campos do formulário */
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25, 52, 0.5);
+
+    outline: none;
+
+    font-size: 16px;
+}
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a{ 
+
+    width: 150px;
+    height: 40px;
+
+    background-color:#ffffff22;
+    color: white;
+
+    display:flex; /* propriedades aplicadas diretamente ao display flex do botão */
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    align-self: end; /* propriedade aplicada diretamente ao GRID */
+
+    transition: 500ms;
+}
+
+
+form a:hover {
+    background: #fff;
+    color:#ff5E84;
+
+    text-decoration: none;
+}
+
+form button {
+    background: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+    grid-column: 2;
+    justify-self: end;
+
+    transition: 500ms;
+}
+
+form button:hover{
+    background-color: rgb(29, 68, 106);
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide { /* o id sempre tem mais força que a classe, mas aqui tem força dupla */
+    /* display: none; => não aceita a propriedade transition */
+    opacity: 0;
+    visibility: hidden; /* suavização */
+
 }
