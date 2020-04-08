@@ -14,7 +14,9 @@
             <section id="intro">
                 <!-- img não precisa fechar -->
                 <header>
-                    <img src="logo.png" alt="imagem da logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="imagem da logo">
+                        </a>
                 </header>
                 <main> <!-- conteúdo principal -->
                     <p>Ficar em casa por longos períodos não é fácil.</p>
@@ -22,12 +24,12 @@
                     <p>Clique em ver ideias para visualizar as ideias já cadastradas e contribua adicionando a sua. O que você está esperando?</p>  
                 </main>
                 <section id="buttons">
-                    <button onclick="onOff()">+ Adicionar ideia</button>
-                    <button class="fat">Visualizar ideias</button>
+                    <button onclick="onOff()">+ Adicionar atividade</button>
+                    <a href="ideias.html" class="button">Visualizar atividades</a>
                 </section>
                 <!-- cmd mais espaço aparecem os emojis -->
                 <footer>
-                    Baseado no Workshop do: <a href="http://rocketseat.com.br">Rocketseat</a>
+                    Baseado no Workshop do: <a href="http://rocketseat.com.br" target="_blank">Rocketseat</a>
                 </footer>
             </section>
             <section id="last-ideas"> <!-- últimas ideias selecionadas -->
@@ -85,7 +87,7 @@
                 <form action="">
                 
                     <div class="input-wrapper">
-                        <label for="title">Digite o nome da sua atividade:</label>
+                        <label for="title">Nome da atividade:</label>
                         <input type="text" name="title">
                     </div>
                 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideias</title>
+</head>
+<body id="page-ideias">
+
+    <div id="container">
+        <header>
+            <a href="index.html">
+            <img src="logo.png" alt="imagem da logo">
+            </a>
+            <nav>
+                <li><a href="index.html">Início</a></li>
+                <li><a class="button" href="#" onclick="onOff()">Nova Ideia</a></li>
+            </nav>
+        </header>
+        <section id="title">
+            <p>Em exibição</p>
+            <h1>Atividades</h1>
+        </section>
+        <main>
+            <section id="ideas">
+                <div class="idea">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2728/2728995.svg" 
+                    alt="imagem de curso de programação">
+                    <div class="content">
+                        <h3>Cursos de Programação</h3>
+                        <p>Estudo</p>
+                        <div class="description">
+                            Não é necessário ser nenhum gênio para aprender a programar, como a maioria das pessoas imagina. Mas é preciso muito estudo, muita prática e principalmente muita dedicação. 
+                            Quanto mais cedo você começar, melhor será. Confira no link abaixo, os cursos que selecionamos especialmente para você aprender neste período que está em casa. Lembre-se que você também pode cadastrar uma ideia
+                            para que outras pessoas possam se inspirar, afinal o nosso site é um canal colaborativo onde toda ajuda é bem-vinda!
+                        </div>
+                        <a href="#">Confira</a> 
+                    </div>
+                </div>
+                
+                <div class="idea">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729027.svg" 
+                    alt="imagem de meditação">
+                    <div class="content">
+                        <h3>Exercícios</h3>
+                        <p>Saúde</p>
+                        <div class="description">
+                            Nós entendemos que é um período difícil para você. Está sendo para todos nós, mas em breve irá passar. É preciso acalmar a mente e o coração.
+                            Aproveite para conferir nossos podcasts de meditação. Lembre-se que você também pode cadastrar uma ideia
+                            para que outras pessoas possam se inspirar, afinal o nosso site é um canal colaborativo onde toda ajuda é bem-vinda!
+                        </div>
+                        <a href="#">Confira</a> 
+                    </div>
+                </div> 
+    
+                <div class="idea">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729009.svg" 
+                    alt="imagem de receitas pela internet">
+                    <div class="content">
+                        <h3>Receitas saudáveis</h3>
+                        <p>Alimentação</p>
+                        <div class="description">
+                            A grana está curta? Selecionamos receitas práticas, incríveis e  ah! deliciosas que cabem no seu bolso. Lembre-se que você também pode cadastrar uma ideia
+                            para que outras pessoas possam se inspirar, afinal o nosso site é um canal colaborativo onde toda ajuda é bem-vinda!
+                        </div>
+                        <a href="#">Confira</a> 
+                    </div>
+                </div> 
+
+                <div class="idea">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729068.svg" 
+                    alt="imagem de uma mulher trabalhando">
+                    <div class="content">
+                        <h3>Empreendendo na crise</h3>
+                        <p>Economia</p>
+                        <div class="description">
+                            É hora de agir com cautela. Todo mundo está preocupado com suas contas, mas lembre-se que os maiores negócios começaram 
+                            com uma boa ideia e não muito dinheiro. Aqui muitas dicas de como empreender com pouco. Lembre-se que você também pode cadastrar uma ideia
+                            para que outras pessoas possam se inspirar, afinal o nosso site é um canal colaborativo onde toda ajuda é bem-vinda!
+                        </div>
+                        <a href="#">Confira</a> 
+                    </div>
+                </div>
+
+            </section>
+        </main>  
+        <footer>Baseado no Workshop do: <a href="http://rocketseat.com.br" target="_blank">Rocketseat</a></footer>
+    </div>
+    <!-- Modal: formulário pop-up -->
+    <div id="modal" class="hide" >
+        <div class="content">
+            <h1>Cadastro de nova atividade</h1>
+
+            <form action="">
+            
+                <div class="input-wrapper">
+                    <label for="title">Nome da atividade:</label>
+                    <input type="text" name="title">
+                </div>
+            
+                <div class="input-wrapper">
+                    <label for="category">Categoria:</label>
+                    <input type="text" name="category">
+                </div>
+            
+                <div class="input-wrapper">
+                    <label for="image">Link da imagem:</label>
+                    <input type="url" name="image">
+                </div>
+               
+                <div class="input-wrapper">
+                    <label for="description">Digite uma descrição para esta ideia:</label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="link">Link da ideia:</label>
+                    <input type="url" name="link">  
+                </div>
+                
+                <a href="#" onclick="onOff()">Voltar</a>
+                <button>Salvar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

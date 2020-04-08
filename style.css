@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+body.hideScroll {
+    overflow: hidden;
+}
+
 /* body #container { força da cascata -> quando tem o body na frente, é mais forte que #container abaixo 
     background: green;
 } */
@@ -29,7 +33,54 @@ p, .description{
     letter-spacing: 0.1px;
 }
 
-header img{
+.button { /* ponto é sempre para classe! */
+    /* button.fat => o botão que leva à classe fat; é diferente de:button . fat => tem um fat dentro de um button! */
+    background: #ff5E84;
+    color: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 8px;
+   
+    font-size: 14px;
+
+    text-align: center;
+    justify-content: center;
+
+    box-shadow: 0px 8px 16px #ff5E8432;
+
+}
+.button a{
+    display: flex;
+    
+}
+
+.button:hover{
+    background-color: rgb(29, 68, 106);
+    text-decoration: none;
+}
+
+#page-ideias nav li{
+    list-style-type: none;
+
+    margin-right: 15px;
+}
+#page-ideias nav li a{
+    color: #25282B;
+}
+#page-ideias nav li a.button{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-ideias nav li:last-child{ /* pega o último filho */
+    margin:0;
+}
+
+header img {
     width: 300px;
 }
 
@@ -78,21 +129,7 @@ button:hover {
     text-decoration: underline;
 }
 
-
-button.fat { /* ponto é sempre para classe! */
-    /* button.fat => o botão que leva à classe fat; é diferente de:button . fat => tem um fat dentro de um button! */
-    color: white;
-    background: #ff5E84;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px #ff5E8432;
-
-    width: 150px;
-    height: 40px;
-}
-
-button.fat:hover{
-    text-decoration: none;
-}
+/* padrão */
 
 footer {
     text-align: center;
@@ -147,17 +184,14 @@ footer a { /* força */
 
     position: absolute;
     top: 0;
-
-    width: 100vw;
-    height: 250vh;
-    /* viewport => toda a área visível do seu dispositivo */
-
-    /* pega a página toda juntamente com o position
-    top: 0;
     bottom: 0;
     right: 0;
-    left: 0; */
+    left: 0; 
 
+    /* width: 100vw;
+    height: 250vh;
+    viewport => toda a área visível do seu dispositivo */
+    
     display: flex;
     justify-content: center;
 
@@ -165,21 +199,27 @@ footer a { /* força */
 
 }
 
+#modal.addScroll{
+    overflow: auto;
+}
+
 #modal .content {
-    margin-top: 128px;
+    margin-top: 75px;
+
     color:white;
 }
 
 #modal .content h1 {
     text-align: center;
     text-transform: uppercase;
+    font-size: 25px;
 }
 
 #modal form {
-    width: 80%;
+    width: 60%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 15%;
 
     display: grid;
     grid-template-columns: 1fr 1fr; /* fração => ideia de flexibilidade */
@@ -275,4 +315,52 @@ form button:hover{
     opacity: 0;
     visibility: hidden; /* suavização */
 
+}
+
+/* ideia.html */
+#page-ideias #container {
+    display: block;
+
+}
+#page-ideias header{
+    display:flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+
+section#title {
+    text-align: center;
+}
+   
+section#title p{
+       opacity: 0.7;
+       margin: 0;
+}
+   
+section#title h1{
+       margin:0;
+       font-size: 28px;
+}
+
+section#ideas{ /*importante!*/
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*1 coluna flexível de um lado e uma coluna flexível de outro lado */
+
+    gap: 20px;
+}
+
+section#ideas .idea {
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+margin-top: 64px;
 }
